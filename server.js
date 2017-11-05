@@ -8,6 +8,9 @@ var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
 
+var mongoose   = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/scotch_express_node_api'); // connect to our database
+
 // configure app to use bodyParser()
 // this will let us get the data from a POST
 app.use(bodyParser.urlencoded({ extended: true }));
